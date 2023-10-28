@@ -1,0 +1,27 @@
+@import url(style.css);
+
+.row{
+  line-height: 200%;
+  inset-block: 5rem;
+ 
+  
+}
+.col-md-8{
+  
+  margin-left: 5rem;
+}
+.card-img-top{
+  width: 2rem;
+  height: 15rem;
+}
+.card{
+  margin-left: 5rem;
+  margin-top: 5rem;
+  width: 15rem;
+  height: 20rem;
+}
+table{
+  
+  margin-top: 5rem;
+  
+}

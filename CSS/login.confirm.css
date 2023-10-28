@@ -1,0 +1,125 @@
+
+@import url(style.css);
+
+
+
+body{
+  background-image: url(../img/logn-confirm-back.jpg);
+  
+  background-position: fixed;
+  background-size: cover;
+  object-fit: cover;
+ 
+  
+  
+  
+}
+
+
+    
+   
+
+
+
+.col-sm-6 {
+  background:var(--primary-color);
+  padding: 20px;
+}
+
+.other {
+  background: var(--primary-color);
+  padding-left: 20px;
+}
+
+.p {
+  text-align: center;
+  color: #100909;
+}
+
+.p a {
+  text-decoration: underline;
+ 
+}
+
+
+
+  /* Default styles for larger screens */
+  .col-sm-6 {
+    width: 50%;
+    float: left;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .other {
+    float: right;
+  }
+
+.staffimg{
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  align-items: center;
+  justify-content: center;
+  margin-left: 100px;
+  margin-top: 100px;
+ 
+  border: 4px solid #ffe51f;
+
+}
+.studentimg{
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  object-fit: cover;
+  align-items: center;
+  justify-content: center;
+  margin-left: 200px;
+  margin-top: 100px;
+  
+
+ 
+  border: 4px solid #e2b00c;
+
+}
+
+  .bannerstu {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    margin-left: 100px;
+   
+  }
+  .bannerstaff {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+   
+    margin-right: 100px;
+   
+  }
+  .button{
+    margin-top: 50px;
+  }
+  a .bannerstaff {
+    text-align: center;
+    color: #100909;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  /* Media query for screens smaller than 768px (e.g., smartphones) */
+  @media (max-width: 768px) {
+    .col-sm-6 {
+      width: 100%;
+      float: none;
+    }
+
+    .other {
+      float: none;
+    }
+  }

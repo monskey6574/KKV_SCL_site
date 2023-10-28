@@ -1,0 +1,15 @@
+@import url(style.css);
+
+
+div.row{
+  line-height: 200%;
+  inset-block: 5rem;
+}
+
+div.col-md-4{
+  margin-top: 5rem;
+}
+.pics{
+  inset-block: 100px;
+  
+}

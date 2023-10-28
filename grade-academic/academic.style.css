@@ -1,0 +1,331 @@
+@import url(../CSS/style.css);
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/*color font variable setup*/
+
+
+
+body{
+  background-color: var(--background);
+  font-family: var(--font-base);
+  font-size: 1rem;
+  line-height: 1.5;
+  background-image: none;
+  
+ 
+  
+
+}
+
+
+
+h1{
+font-family: var(--font-base);
+
+}
+
+/* nav setup */
+
+
+.navbar {
+background:var(--primary-color);
+box-shadow: 0 4px 6px rgba(22, 22, 26, 0.18);
+font-family: var(--font-base);
+margin-bottom: 5rem;
+font-size: medium;
+
+
+}
+
+
+.navbar .navbar-nav .nav-link {
+color: #ffffff;
+}
+.btn-outline-dark {
+border-radius: 0;
+}
+.btn-outline-dark:focus {
+box-shadow: none;
+}
+.nav-item{
+padding: 0 1rem;
+color: white;
+
+}
+.sclname{
+  margin-left: 2rem;
+  color: var(--primary-color);
+  
+}
+
+/*................................
+Buttons CSS setup*
+.....................................*/
+.button {
+ background-color: var(--primary-color);
+
+  color: #fff;
+  width: 8rem;
+  height: 2.5rem;
+  border-radius: 12px;
+ justify-content: space-between;
+ font-size: small;
+ 
+}
+
+.btn-gp{
+  justify-content: space-between;
+  
+  
+}
+
+container{
+  margin-left: 100px;
+  margin-top: 500px;
+
+}
+
+
+
+
+/*................................
+navbar CSS setup*
+.....................................*/
+
+
+
+/*................................
+Buttons CSS setup*
+...................................../
+
+
+/* Footer setup */
+
+footer {
+  color: var(--secondary-color);
+  margin-top: 5rem;
+}
+ul {
+  padding: 0px;
+}
+ol, ul {
+  margin-bottom: 0px;
+}
+
+.social-icon {
+  padding: 0;
+  margin-bottom: 0px;
+      float: right;
+}
+
+.social-icon li {
+  list-style: none;
+  display: inline-block;
+}
+.social-icon li i {
+  font-size: 12px;
+  color: #262725;
+  border: solid 2px #ffffff;
+  height: 31px;
+  width: 31px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 100px;
+  line-height: 27px;
+  margin-right: 15px;
+  transition: 1s;
+  background: #fff;
+}
+.social-icon li i:hover {
+  border: solid 2px #262725;
+  color: #ffffff;
+  background: #262725;
+}
+
+.phone-no i {
+  position: relative;
+  margin-right: 14px;
+  font-size: 43px;
+  top: 5px;
+}
+
+
+.footer-top {
+  background:var(--dark-color);
+  padding:50px 0 50px;
+}
+.footer-top h4 {
+  font-size: 19px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.footer-top p {
+  font-size: 13px;
+  line-height: 2;
+}
+
+footer p {
+margin-bottom:0;
+}
+.footer-logo {
+  display: block;
+  margin-bottom: 32px;
+}
+.address1 li {
+  list-style: none;
+  position: relative;
+  padding: 0px 0 14px 34px;
+  line-height: 26px;
+}
+ul.address1 span {
+  position: absolute;
+  width: 40px;
+  max-width: 40px;
+  left: 0;
+}
+.address1 li a {
+  color: #fff;
+  text-decoration: none;
+}
+ul.address1 i {
+  width: 20px;
+  position: absolute;
+  left: 0px;
+  text-align: center;
+  font-size: 28px;
+  top: 0;
+}
+
+ul.address1 i.fa-envelope {
+  font-size: 18px;
+  top: 4px;
+}
+footer ul.social-icon {
+  float: left;
+}
+footer .social-icon li i:hover {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.footer-bottom {
+  background:var(--primary-color);
+  padding: 10px 0px;
+}
+.footer-bottom ul li {
+  display: inline;
+  margin-right: 20px;
+  font-size: 18px;
+}
+.footer-bottom ul li a{
+  color:#fff;
+}
+
+.footer-bottom ul {
+  float: right;
+}
+
+.footer-bottom ul li:last-child {
+  margin-right: 0;
+}
+.copyright {
+  font-size: 18px;
+}
+
+@import url(style.css);
+
+
+/*................................
+carosel setup*/
+.navbar-brand-fw-bold{
+  font-family: 'Poppins', sans-serif;
+  color: aqua;
+}
+.navbar{
+  margin-bottom: 0;
+}
+.caro{
+  margin-top: 1rem;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+#carouselExampleIndicators{
+  width: 65%;
+  height: 100vh;
+  align-items: center;
+
+}
+.d-block w-100 .carousel-inner{
+  height: 524px;
+  width: 1125px;
+  align-items: center;
+}
+.line{
+  width: 100%;
+  height: 3rem;
+  background-color:brown;
+}
+
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #f6d365;
+  
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right bottom, rgb(126, 17, 19), rgb(126, 17, 19));
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right bottom, rgb(126, 17, 19), rgb(204, 180, 27))
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  .btn-outline-dark {
+    border: none;
+    padding: 0;
+    outline: none;
+  }
+
+  .btn-outline-dark:hover {
+    background: none;
+    color: rgb(104, 6, 6);
+  }
+}
+
