@@ -5,49 +5,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>update</title>
 </head>
 <body>
-<?php
-include_once '../../connect.php';
-
-$id=$_GET['updated-staff-index'];
-
-
-
-   if (isset($_POST['submit'])){
-   //variables for connection
-   $name=$_POST['username'];
-   $index=$_POST['index'];
-   $mail=$_POST['email'];
-   $phone=$_POST['phone'];
-   $title=$_POST['title'];
-   $quali=$_POST['quali'];
-   $other=$_POST['other'];
-   $date=$_POST['date'];
-   //connection
-   $sql = "UPDATE  `staff_data` set index=$id, name= VALUES ('$index', '$name','$mail', '$phone', '$title', '$quali', '$other', '$date')";
-   //now i can use the connection variable $conn from connect.php
-
-   $result = mysqli_query($conn,$sql);
-  
-
-   if($result){
-   
-     header("location:../admin.staff.php");
-     $success_message = "data inserted successfully";
-     echo $success_message;
-     echo '<script type="text/javascript">alert("' . $success_message . '");</script>';
-                            
-
-   }else{
-    echo "data not inserted. Error: " . mysqli_error($conn);
-   }
-   }
-
-
-?>
-
   
 
 
@@ -199,6 +159,73 @@ a:hover {
     padding: 20px 0;
 }
     </style>
+    
+    <?php
+include_once '../../connect.php';
+
+
+
+
+   if (isset($_POST['submit'])){
+   //variables for connection
+   $name=$_POST['username'];
+   $index=$_POST['index'];
+ 
+   $mail=$_POST['email'];
+   $address=$_POST['address'];
+   $phone=$_POST['phone'];
+   $title=$_POST['title'];
+   $quali=$_POST['quali'];
+   $other=$_POST['other'];
+   $date=$_POST['date'];
+   //connection
+//    $sql = "INSERT INTO `staff_data` (staf_Index, staf_Name, staf_Mail, staf_Address, staf_Phone, staf_Title,staf_Quali,staf_Other,staf_Adday) VALUES ('$index', '$name','$mail',' $address' ,'$phone', '$title', '$quali', '$other', '$date')";
+  $sql = "UPDATE `staff_data` SET `staf_Name` = '$name', `staf_Mail` = '$mail', `staf_Address` = '$address', `staf_Phone` = '$phone', `staf_Title` = '$title', `staf_Quali` = '$quali', `staf_Other` = '$other', `staf_Adday` = '$date'
+   WHERE `staf_Index` = '$index';";
+//now i can use the connection variable $conn from connect.php
+
+   $result=mysqli_query($conn,$sql);
+  
+
+   if($result){
+   
+  
+     $success_message = "Updated  inserted successfully";
+     echo $success_message;
+   
+                            
+
+   }else{
+    echo "data not inserted. Error: " . mysqli_error($conn);
+   }
+   }
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="container">
         <form action="update.staff.php" method="post" class="sign-form" id="sign-form" autocomplete="on">
             <h1 class="form-title">UPDATE </h1>
@@ -210,9 +237,12 @@ a:hover {
 
             <label for="index">Index<span class="star-required"></span></label>
             <input type="text" name="index" id="email" placeholder="" required>
+            
 
             <label for="mail">Mail<span class="star-required"></span></label>
             <input type="email" name="email" id="email" placeholder="" required>
+            <label for="mail">Address<span class="star-required"></span></label>
+            <input type="address" name="address" id="address" placeholder="" required>
            
             <br>
             <label for="phone">Phone<span class="star-required"></span></label>
@@ -237,7 +267,7 @@ a:hover {
             <!-- <input type="checkbox" name="terms-agree" id="terms-agree" required>
             <p class="sentence-agree">I agree to the <a href="">Terms & Conditions</a></p> -->
                 <div class="sign-btn-container">
-                    <button type="submit" name="Update" class="google-sign-btn"><i class="fab fa-google"></i>Sign Up</button>
+                    <button type="submit" name="submit" class="google-sign-btn"><i class="fab fa-google"></i>Update Data</button>
 
 
         </form>

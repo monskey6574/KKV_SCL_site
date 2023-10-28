@@ -168,9 +168,12 @@ a:hover {
 
             <label for="index">Index<span class="star-required"></span></label>
             <input type="text" name="index" id="email" placeholder="" required>
+            
 
             <label for="mail">Mail<span class="star-required"></span></label>
             <input type="email" name="email" id="email" placeholder="" required>
+            <label for="mail">Address<span class="star-required"></span></label>
+            <input type="address" name="address" id="address" placeholder="" required>
            
             <br>
             <label for="phone">Phone<span class="star-required"></span></label>
