@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +8,46 @@
   <title>Document</title>
 </head>
 <body>
+<?php
+include_once '../../connect.php';
+
+$id=$_GET['updated-staff-index'];
+
+
+
+   if (isset($_POST['submit'])){
+   //variables for connection
+   $name=$_POST['username'];
+   $index=$_POST['index'];
+   $mail=$_POST['email'];
+   $phone=$_POST['phone'];
+   $title=$_POST['title'];
+   $quali=$_POST['quali'];
+   $other=$_POST['other'];
+   $date=$_POST['date'];
+   //connection
+   $sql = "UPDATE  `staff_data` set index=$id, name= VALUES ('$index', '$name','$mail', '$phone', '$title', '$quali', '$other', '$date')";
+   //now i can use the connection variable $conn from connect.php
+
+   $result = mysqli_query($conn,$sql);
+  
+
+   if($result){
+   
+     header("location:../admin.staff.php");
+     $success_message = "data inserted successfully";
+     echo $success_message;
+     echo '<script type="text/javascript">alert("' . $success_message . '");</script>';
+                            
+
+   }else{
+    echo "data not inserted. Error: " . mysqli_error($conn);
+   }
+   }
+
+
+?>
+
   
 
 
@@ -158,8 +200,8 @@ a:hover {
 }
     </style>
 <div class="container">
-        <form action="staff.signup.check.php" method="post" class="sign-form" id="sign-form" autocomplete="on">
-            <h1 class="form-title">ADD STAFF </h1>
+        <form action="update.staff.php" method="post" class="sign-form" id="sign-form" autocomplete="on">
+            <h1 class="form-title">UPDATE </h1>
             <!-- <p class="form-caption">See your growth and get consulting support!</p> -->
            
 
@@ -195,28 +237,12 @@ a:hover {
             <!-- <input type="checkbox" name="terms-agree" id="terms-agree" required>
             <p class="sentence-agree">I agree to the <a href="">Terms & Conditions</a></p> -->
                 <div class="sign-btn-container">
-                    <button type="submit" name="submit" class="google-sign-btn"><i class="fab fa-google"></i>Sign Up</button>
+                    <button type="submit" name="Update" class="google-sign-btn"><i class="fab fa-google"></i>Sign Up</button>
 
 
         </form>
     </div>
-<?php
-    include_once 'staff.signup.check.php';
 
-    if($result){
-   
-        header("location:../admin.staff.php");
-        $success_message = "data inserted successfully";
-        echo $success_message;
-        echo '<script type="text/javascript">alert("' . $success_message . '");</script>';
-                               
-   
-      }else{
-       echo "data not inserted. Error: " . mysqli_error($conn);
-      }
-      
-   
-?>
 
   
 </body>

@@ -100,6 +100,7 @@ include_once '../connect.php';
         <th scope="col">Title</th>
         <th scope="col">Other</th>
         <th scope="col">Assigend date</th>
+        <th scope="col">Update/Delete</th>
         
 
       </tr>
@@ -131,6 +132,10 @@ include_once '../connect.php';
           <td>'.$title.'</td>
           <td>'.$othr.'</td>
           <td>'.$date.'</td>
+          <td>
+          <button class="btn btn-primary"><a href="Staff_handle/update.php?Updated-staff-index='.$id.'" class="text-light">Update </a></button>
+          <button class="btn btn-danger"><a href="Staff_handle/delete.staff.php?deleted-staff-index='.$id.'"class="text-light">Delete </a></button>
+          </td>
          
         </tr>';
 
@@ -140,41 +145,20 @@ include_once '../connect.php';
 
 
 
-
-
-
-
-
-
-
-
-
-
-      ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
+   
+        
      
-      
-      
+  ?>
+  <style>
+    a{
+      text-decoration: none;
+      color: white;
+    }
+    </style>
+
+
+                               
+     
     </tbody>
   </table>
   </div>
