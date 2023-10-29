@@ -162,22 +162,25 @@ a:hover {
     
     <?php
 include_once '../../connect.php';
+$id = $_GET['updated-staff-index'];
+
+$sql = "SELECT * FROM `staff_data` WHERE `staf_Index`='$id'";
+
+$result = mysqli_query($conn,$sql);
+$row = mysqli_fetch_assoc($result);
+$name = $row['staf_Name'];
+$index = $row['staf_Index'];
+$mail = $row['staf_Mail'];
+$address = $row['staf_Address'];
+$phone = $row['staf_Phone'];
+$title = $row['staf_Title'];
+$quali = $row['staf_Quali'];
+$other = $row['staf_Other'];
+$date = $row['staf_Adday'];
 
 
 
 
-   if (isset($_POST['submit'])){
-   //variables for connection
-   $name=$_POST['username'];
-   $index=$_POST['index'];
- 
-   $mail=$_POST['email'];
-   $address=$_POST['address'];
-   $phone=$_POST['phone'];
-   $title=$_POST['title'];
-   $quali=$_POST['quali'];
-   $other=$_POST['other'];
-   $date=$_POST['date'];
    //connection
 //    $sql = "INSERT INTO `staff_data` (staf_Index, staf_Name, staf_Mail, staf_Address, staf_Phone, staf_Title,staf_Quali,staf_Other,staf_Adday) VALUES ('$index', '$name','$mail',' $address' ,'$phone', '$title', '$quali', '$other', '$date')";
   $sql = "UPDATE `staff_data` SET `staf_Name` = '$name', `staf_Mail` = '$mail', `staf_Address` = '$address', `staf_Phone` = '$phone', `staf_Title` = '$title', `staf_Quali` = '$quali', `staf_Other` = '$other', `staf_Adday` = '$date'
@@ -198,7 +201,7 @@ include_once '../../connect.php';
    }else{
     echo "data not inserted. Error: " . mysqli_error($conn);
    }
-   }
+   
 
 
 ?>
@@ -233,33 +236,33 @@ include_once '../../connect.php';
            
 
             <label for="username">Name<span class="star-required"></span></label>
-            <input type="text" name="username" id="username" placeholder="Name" autofocus required>
+            <input type="text" name="username" id="username"value= <?php echo $name?> placeholder="Name" autofocus required>
 
             <label for="index">Index<span class="star-required"></span></label>
-            <input type="text" name="index" id="email" placeholder="" required>
+            <input type="text" name="index" id="email" <?php echo $index?>placeholder="" required>
             
 
             <label for="mail">Mail<span class="star-required"></span></label>
-            <input type="email" name="email" id="email" placeholder="" required>
+            <input type="email" name="email" id="email"<?php echo $mail?> placeholder="" required>
             <label for="mail">Address<span class="star-required"></span></label>
-            <input type="address" name="address" id="address" placeholder="" required>
+            <input type="address" name="address" id="address"<?php echo $address?> placeholder="" required>
            
             <br>
             <label for="phone">Phone<span class="star-required"></span></label>
-            <input type="text" name="phone" id="phone" placeholder="" autofocus required>
+            <input type="text" name="phone" id="phone"<?php echo $phone?> placeholder="" autofocus required>
 
             <label for="title">Title<span class="star-required"></span></label>
-            <input type="text" name="title" id="title" placeholder="" required>
+            <input type="text" name="title" id="title" <?php echo $title?>placeholder="" required>
 
             <label for="quali">Qualification<span class="star-required"></span></label>
-            <input type="text" name="quali" id="quali" placeholder="" required>
+            <input type="text" name="quali" id="quali"<?php echo $quali?> placeholder="" required>
            
             <br>
             <label for="other">Other<span class="star-required"></span></label>
-            <input type="text" name="other" id="username" placeholder="" autofocus required>
+            <input type="text" name="other" id="username" <?php echo $other?>placeholder="" autofocus required>
 
             <label for="date">Date added<span class="star-required"></span></label>
-            <input type="date" name="date" id="date" placeholder="today date" required>
+            <input type="date" name="date" id="date" <?php echo $date?>placeholder="today date" required>
 
         <br>
         <p></p>
