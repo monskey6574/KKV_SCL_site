@@ -25,3 +25,7 @@ table{
   margin-top: 5rem;
   
 }
+.title{
+  text-decoration:none;
+  color: black;
+}

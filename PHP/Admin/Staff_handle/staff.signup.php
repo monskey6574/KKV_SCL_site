@@ -203,23 +203,23 @@ a:hover {
 
         </form>
     </div>
-<?php
-    include_once 'staff.signup.check.php';
+<!-- <?php
+    // include_once 'staff.signup.check.php';
 
-    if($result){
+    // if($result){
    
-        header("location:../admin.staff.php");
-        $success_message = "data inserted successfully";
-        echo $success_message;
-        echo '<script type="text/javascript">alert("' . $success_message . '");</script>';
+    //     header("location:../admin.staff.php");
+    //     $success_message = "data inserted successfully";
+    //     echo $success_message;
+    //     echo '<script type="text/javascript">alert("' . $success_message . '");</script>';
                                
    
-      }else{
-       echo "data not inserted. Error: " . mysqli_error($conn);
-      }
+    //   }else{
+    //    echo "data not inserted. Error: " . mysqli_error($conn);
+    //   }
       
    
-?>
+?> -->
 
   
 </body>

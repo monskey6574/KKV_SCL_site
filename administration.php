@@ -97,103 +97,63 @@
   </div>
 </div>
 </div>
+
   <!--Grid column-->
+  <div class="container my-5">
+  <div class="row">
+    <div class="col-lg-3">
+      <img class="w-100 shadow" src="https://via.placeholder.com/824x552" />
+    </div>
+    <div class="col-lg-3">
+      <div class="p-1">
+          <h4 class="display-7">H1 Heading</h4>
+          <p class="lead">Crow's nest schooner ho scallywag hail-shot gabion salmagundi. Doubloon careen code of conduct lugsail hulk ye long clothes. </p>
+          
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="">
+
+<div class="container my-5">
+  <div class="row">
+    <div class="col-lg-3">
+      <img class="w-100 shadow" src="https://via.placeholder.com/824x552" />
+    </div>
+    <div class="col-lg-3">
+      <div class="p-1">
+          <h4 class="display-7">H1 Heading</h4>
+          <p class="lead">Crow's nest schooner ho scallywag hail-shot gabion salmagundi. Doubloon careen code of conduct lugsail hulk ye long clothes. </p>
+          
+        </div>
+    </div>
+</div>
+</div>
+<div class="container my-5">
+  <div class="row">
+    <div class="col-lg-3">
+      <img class="w-100 shadow" src="https://via.placeholder.com/824x552" />
+    </div>
+    <div class="col-lg-3">
+      <div class="p-1">
+          <h4 class="display-7">H1 Heading</h4>
+          <p class="lead">Crow's nest schooner ho scallywag hail-shot gabion salmagundi. Doubloon careen code of conduct lugsail hulk ye long clothes. </p>
+          
+        </div>
+    </div>
+</div>
 
 
 
 
 
-<div class="container py-5">
-  <div class="row row_branchen">
+
+
+
     
     
-  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-    <div class="card">
-      <a href="https://angebote24.de/verkaufsautomaten/">
-        <div class="image__wrapper">
-          <div class="card__shadow--1"></div>
-            <img class="card-img-top" src="img/h1.jpg" alt="Angebote - Verkaufsautomaten">
-        </div>
-          <div class="card-body pb-4">
-            <h3 class="card-title">Verkaufsautomaten</h3>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </a>
-    </div>
-  </div>
-  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-    <div class="card">
-      <a href="https://angebote24.de/verkaufsautomaten/">
-        <div class="image__wrapper">
-          <div class="card__shadow--1"></div>
-            <img class="card-img-top" src="img/h1.jpg" alt="Angebote - Verkaufsautomaten">
-        </div>
-          <div class="card-body pb-4">
-            <h3 class="card-title">Verkaufsautomaten</h3>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </a>
-    </div>
-  </div>
-  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-    <div class="card">
-      <a href="https://angebote24.de/verkaufsautomaten/">
-        <div class="image__wrapper">
-          <div class="card__shadow--1"></div>
-            <img class="card-img-top" src="img/h1.jpg" alt="Angebote - Verkaufsautomaten">
-        </div>
-          <div class="card-body pb-4">
-            <h3 class="card-title">Verkaufsautomaten</h3>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </a>
-    </div>
-  </div>
-    
-  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-    <div class="card">
-      <a href="https://angebote24.de/wasserspender/">
-        <div class="image__wrapper">
-          <div class="card__shadow--1"></div>
-            <img class="card-img-top" src="img/h2.jpg" alt="Angebote - Wasserspender">
-        </div>
-          <div class="card-body pb-4">
-            <h3 class="card-title">Wasserspender</h3>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </a>
-    </div>
-  </div>
-    
-  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-    <div class="card">
-      <a href="https://angebote24.de/warenautomaten/">
-        <div class="image__wrapper">
-          <div class="card__shadow--1"></div>
-            <img class="card-img-top" src="img/h2.jpg" alt="Angebote Wasserspender">
-        </div>
-          <div class="card-body pb-4">
-            <h3 class="card-title">Warenautomaten</h3>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </a>
-    </div>
-  </div>
-    
-  <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-    <div class="card">
-      <a href="https://angebote24.de/kaffeeautomaten/">
-        <div class="image__wrapper">
-          <div class="card__shadow--1"></div>
-            <img class="card-img-top" src="img/h2.jpg" alt="Angebote Wasserspender">
-        </div>
-          <div class="card-body pb-4">
-            <h3 class="card-title">Kaffeeautomaten</h3>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </a>
-    </div>
-  </div>
+
 
   
 
