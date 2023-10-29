@@ -117,13 +117,14 @@ span[class ^= "icon"]{
     <li>
       <a href="admin.staff.php">
 
-        <span class="text">About</span>
+        <span class="text">Staff</span>
       </a>
     </li>
     <li>
-      <a href="#">
+      <a href="admin.adminis.php
+      ">
 
-          <span class="text">Portfolio</span>
+          <span class="text">Administration</span>
       </a>
     </li>
     <li>

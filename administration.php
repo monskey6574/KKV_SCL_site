@@ -213,285 +213,81 @@
   <table class="table align-middle mb-0 bg-white">
     <thead class="bg-light">
       <tr>
-        <th>Name</th>
-        <th>Title</th>
-        <th>Contact</th>
+        <th scope="col">No.</th>
+    
+        <th scope="col">Name</th>
+        <th scope="col">Title</th>
+       
+       
+        
+        <th scope="col">Qualification</th>
+        <th scope="col">Contact</th>
       
-        <th>Quelifications</th>
+      
+       
        
   
       </tr>
     </thead>
     <tbody>
+    <?php
+include_once 'PHP/connect.php';
+
+
+$sql ="SELECT * FROM staff_data";
+$result = mysqli_query($conn,$sql);
+
+if($result){
+  while($row=mysqli_fetch_assoc($result)){
+    $no=$row['No'];
+  
+    $name=$row['staf_Name'];
+   
+
+
+    $phone=$row['staf_Phone'];
+    $title=$row['staf_Title'];
+    $quali=$row['staf_Quali'];
+  
+    echo'  <tr>
+    <th scope="row">'.$no.'</th>
+
+    <td>'.$name.'</td>
+    
+
+  
+    <td>'.$title.'</td>
+    <td>'.$quali.'</td>
+    <td>'.$phone.'</td>
+  
+  
+    <td>
+    </td>
+   
+  </tr>';
+
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+?>
+
+
+
+
       <tr>
         <td>
-          <div class="d-flex align-items-center">
-            <img src="img/principle.jpg" alt="" style="width: 45px; height: 45px"
-              class="rounded-circle" />
-            <div class="ms-3">
-              <p class="fw-bold mb-1">John Doe</p>
-             
-            </div>
-          </div>
-
-        </td>
-
-        <td>
-          
-          <!--   <p class="fw-normal mb-1">Software engineer</p> -->
-          <p class="text-muted mb-0">IT department</p>
-        </td>
-        <td>
-          <p class="fw-normal mb-1">Software engineer</p>
-          <p class="text-muted mb-0">IT department</p>
-        </td>
-        <td>
-          <p class="fw-normal mb-1">Software engineer</p>
-          
-        </td>
-     
-
-        
-      </tr>
-
-
-      <tr>
-        <td>
-          <div class="d-flex align-items-center">
-            <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt="" style="width: 45px; height: 45px"
-              class="rounded-circle" />
-            <div class="ms-3">
-              <p class="fw-bold mb-1">John Doe</p>
-              <p class="text-muted mb-0">john.doe@gmail.com</p>
-            </div>
-          </div>
-
-        </td>
-
-        <td>
-          <p class="fw-normal mb-1">Software engineer</p>
-          <p class="text-muted mb-0">IT department</p>
-        </td>
-        <td>
-          <p class="fw-normal mb-1">Software engineer</p>
-          <p class="text-muted mb-0">IT department</p>
-        </td>
-
-        
-      </tr>
-      <tr>
-        <td>
-          <div class="d-flex align-items-center">
-            <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt="" style="width: 45px; height: 45px"
-              class="rounded-circle" />
-            <div class="ms-3">
-              <p class="fw-bold mb-1">John Doe</p>
-              <p class="text-muted mb-0">john.doe@gmail.com</p>
-            </div>
-          </div>
-
-        </td>
-
-        <td>
-          <p class="fw-normal mb-1">Software engineer</p>
-          <p class="text-muted mb-0">IT department</p>
-        </td>
-        <td>
-          <p class="fw-normal mb-1">Software engineer</p>
-          <p class="text-muted mb-0">IT department</p>
-        </td>
-
-        
-      </tr>
-      <tr>
-        <td>
-          <div class="d-flex align-items-center">
-            <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt="" style="width: 45px; height: 45px"
-              class="rounded-circle" />
-            <div class="ms-3">
-              <p class="fw-bold mb-1">John Doe</p>
-              <p class="text-muted mb-0">john.doe@gmail.com</p>
-            </div>
-          </div>
-
-        </td>
-
-        <td>
-          <p class="fw-normal mb-1">Software engineer</p>
-          <p class="text-muted mb-0">IT department</p>
-        </td>
-        <td>
-          <p class="fw-normal mb-1">Software engineer</p>
-          <p class="text-muted mb-0">IT department</p>
-        </td>
-
-        
-      </tr>
-      <tr>
-        <td>
-          <div class="d-flex align-items-center">
-            <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt="" style="width: 45px; height: 45px"
-              class="rounded-circle" />
-            <div class="ms-3">
-              <p class="fw-bold mb-1">John Doe</p>
-              <p class="text-muted mb-0">john.doe@gmail.com</p>
-            </div>
-          </div>
-
-        </td>
-
-        <td>
-          <p class="fw-normal mb-1">Software engineer</p>
-          <p class="text-muted mb-0">IT department</p>
-        </td>
-        <td>
-          <p class="fw-normal mb-1">Software engineer</p>
-          <p class="text-muted mb-0">IT department</p>
-        </td>
-
-        
-      </tr>
-      <tr>
-        <td>
-          <div class="d-flex align-items-center">
-            <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt="" style="width: 45px; height: 45px"
-              class="rounded-circle" />
-            <div class="ms-3">
-              <p class="fw-bold mb-1">John Doe</p>
-              <p class="text-muted mb-0">john.doe@gmail.com</p>
-            </div>
-          </div>
-
-        </td>
-
-        <td>
-          <p class="fw-normal mb-1">Software engineer</p>
-          <p class="text-muted mb-0">IT department</p>
-        </td>
-        <td>
-          <p class="fw-normal mb-1">Software engineer</p>
-          <p class="text-muted mb-0">IT department</p>
-        </td>
-
-        
-      </tr>
-      <tr>
-        <td>
-          <div class="d-flex align-items-center">
-            <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt="" style="width: 45px; height: 45px"
-              class="rounded-circle" />
-            <div class="ms-3">
-              <p class="fw-bold mb-1">John Doe</p>
-              <p class="text-muted mb-0">john.doe@gmail.com</p>
-            </div>
-          </div>
-
-        </td>
-
-        <td>
-          <p class="fw-normal mb-1">Software engineer</p>
-          <p class="text-muted mb-0">IT department</p>
-        </td>
-        <td>
-          <p class="fw-normal mb-1">Software engineer</p>
-          <p class="text-muted mb-0">IT department</p>
-        </td>
-
-        
-      </tr>
-      <tr>
-        <td>
-          <div class="d-flex align-items-center">
-            <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt="" style="width: 45px; height: 45px"
-              class="rounded-circle" />
-            <div class="ms-3">
-              <p class="fw-bold mb-1">John Doe</p>
-              <p class="text-muted mb-0">john.doe@gmail.com</p>
-            </div>
-          </div>
-
-        </td>
-
-        <td>
-          <p class="fw-normal mb-1">Software engineer</p>
-          <p class="text-muted mb-0">IT department</p>
-        </td>
-        <td>
-          <p class="fw-normal mb-1">Software engineer</p>
-          <p class="text-muted mb-0">IT department</p>
-        </td>
-
-        
-      </tr>
-      <tr>
-        <td>
-          <div class="d-flex align-items-center">
-            <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt="" style="width: 45px; height: 45px"
-              class="rounded-circle" />
-            <div class="ms-3">
-              <p class="fw-bold mb-1">John Doe</p>
-              <p class="text-muted mb-0">john.doe@gmail.com</p>
-            </div>
-          </div>
-
-        </td>
-
-        <td>
-          <p class="fw-normal mb-1">Software engineer</p>
-          <p class="text-muted mb-0">IT department</p>
-        </td>
-        <td>
-          <p class="fw-normal mb-1">Software engineer</p>
-          <p class="text-muted mb-0">IT department</p>
-        </td>
-
-        
-      </tr>
-      <tr>
-        <td>
-          <div class="d-flex align-items-center">
-            <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt="" style="width: 45px; height: 45px"
-              class="rounded-circle" />
-            <div class="ms-3">
-              <p class="fw-bold mb-1">John Doe</p>
-              <p class="text-muted mb-0">john.doe@gmail.com</p>
-            </div>
-          </div>
-
-        </td>
-
-        <td>
-          <p class="fw-normal mb-1">Software engineer</p>
-          <p class="text-muted mb-0">IT department</p>
-        </td>
-        <td>
-          <p class="fw-normal mb-1">Software engineer</p>
-          <p class="text-muted mb-0">IT department</p>
-        </td>
-
-        
-      </tr>
-      <tr>
-        <td>
-          <div class="d-flex align-items-center">
-            <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" alt="" style="width: 45px; height: 45px"
-              class="rounded-circle" />
-            <div class="ms-3">
-              <p class="fw-bold mb-1">John Doe</p>
-              <p class="text-muted mb-0">john.doe@gmail.com</p>
-            </div>
-          </div>
-
-        </td>
-
-        <td>
-          <p class="fw-normal mb-1">Software engineer</p>
-          <p class="text-muted mb-0">IT department</p>
-        </td>
-        <td>
-          <p class="fw-normal mb-1">Software engineer</p>
-          <p class="text-muted mb-0">IT department</p>
-        </td>
+         
 
         
       </tr>
