@@ -87,7 +87,7 @@
 <!-- login form start -->
 
 
-<form  action="PHP/login.php" method="post">
+<form  action="PHP/Staff/staff.dash.php" method="post">
 <div class="login-page">
   <div class="form">
    
