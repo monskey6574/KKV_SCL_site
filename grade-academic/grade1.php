@@ -88,18 +88,63 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
+    <?php
+include_once '../PHP/connect.php';
+
+
+$sql ="SELECT * FROM grade_1";
+$result = mysqli_query($conn,$sql);
+
+if($result){
+  while($row=mysqli_fetch_assoc($result)){
+    $no=$row['No'];
   
-        
-        <td>
-          <button type="button" class="button">Download</button>
-        </td>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
+    $subject=$row['Subject'];
+   
+
+
+    $lesson=$row['Lesson'];
+    $met=$row['Met'];
+    $intro=$row['Intro'];
+    
+    $submted_day=$row['Subday'];
+    $submited_by=$row['Subby'];
+    
+  
+    echo'  <tr>
+    <th scope="row">'.$no.'</th>
+
+    <td>'.$subject.'</td>
+    
+
+  
+    <td>'.$lesson.'</td>
+    <td>'.$met.'</td>
+    <td>'.$intro.'</td>
+    <td>'.$submted_day.'</td>
+    <td>'.$submited_by.'</td>
+  
+  
+    <td>
+    </td>
+   
+  </tr>';
+
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+?>
       </tr>
      
       
