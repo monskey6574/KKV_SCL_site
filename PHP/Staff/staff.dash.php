@@ -255,15 +255,52 @@ img {
  
   
 }
+h6{
+  color: #999;
+}
 
 
     </style>
+<!-- php for read data -->
 
-    <!--  mnu-->
+<?php
+
  
+$Servername = "localhost";
+$Username = "Ayodya";
+$Password = "mkAqpJ.B*NWPAw.r";
+$Database = "kaleliya";
+
+$conn =mysqli_connect($Servername,$Username,$Password,$Database);
+// Check connection
+if(!$conn){
+ die("Connection failed: " . mysqli_connect_error());
+}
+else{
+ // echo "Connected successfully";
+}
+
+$id =1 ;
+
+$sql = "SELECT * FROM `staff_data` WHERE `staf_Index`='1'";
+
+$result = mysqli_query($conn,$sql);
+$row = mysqli_fetch_assoc($result);
+$name = $row['staf_Name'];
+$index = $row['staf_Index'];
+$mail = $row['staf_Mail'];
+$address = $row['staf_Address'];
+$phone = $row['staf_Phone'];
+$title = $row['staf_Title'];
+$quali = $row['staf_Quali'];
+$other = $row['staf_Other'];
+$date = $row['staf_Adday'];
 
 
-    <!-- menu end -->
+
+?>
+
+
 
 
 <div class="container">
@@ -280,7 +317,7 @@ img {
                       <h6 class="mb-0">Full Name</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      Kenneth Valdez
+                    <?php echo $name?>
                     </div>
                   </div>
                   <hr>
@@ -289,25 +326,17 @@ img {
                       <h6 class="mb-0">Email</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      fip@jukmuh.al
+                    <?php echo $mail?>
                     </div>
                   </div>
                   <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Phone</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                      (239) 816-9029
-                    </div>
-                  </div>
-                  <hr>
+                  
                   <div class="row">
                     <div class="col-sm-3">
                       <h6 class="mb-0">Mobile</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      (320) 380-4539
+                    <?php echo $phone?>
                     </div>
                   </div>
                   <hr>
@@ -316,9 +345,42 @@ img {
                       <h6 class="mb-0">Address</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      Bay Area, San Francisco, CA
+                    <?php echo $address?>
                     </div>
                   </div>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Title</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                    <?php echo $title?>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Qualification</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                    <?php echo $quali?>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Other</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                    <?php echo $other?>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Assigned Date</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                    <?php echo $date?>
+                    </div>
+                  </div>
+
                   <hr>
                   <div class="row">
                     <div class="col-sm-12">
@@ -340,14 +402,13 @@ img {
 <div class="main">
 
 <ul class="cards">
-  <li class="cards_item">
+<li class="cards_item">
     <div class="card">
-      <div class="card_image"><img src="https://picsum.photos/500/300/?image=10"></div>
+      <div class="card_image"><img src="https://picsum.photos/500/300/?image=5"></div>
       <div class="card_content">
-        <h2 class="card_title">Card Grid Layout</h2>
-        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-        <button class="btn card_btn">Read More</button>
-      </div>
+        <h2 class="card_title">Class work </h2>
+        <p class="card_text">Choose a grade and add class work</p>
+        <a class="btn btn-primary" href="Grade/gradechoose.php" role="button">GO</a>      </div>
     </div>
   </li>
   <li class="cards_item">
