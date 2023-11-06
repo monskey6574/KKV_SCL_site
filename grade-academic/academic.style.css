@@ -291,10 +291,27 @@ carosel setup*/
 
 
 
+  .container {
+    padding: 20px;
+    overflow-x: auto;  /* Add horizontal scrollbar */
+  }
 
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
 
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
 
-
+  @media (max-width: 768px) {
+    th, td {
+      font-size: 12px;  /* Adjust font size for smaller screens */
+    }
+  }
 
 
 
@@ -328,4 +345,23 @@ carosel setup*/
     color: rgb(104, 6, 6);
   }
 }
+  .container {
+      padding: 20px;
+    }
 
+    .table-responsive {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      table {
+        font-size: 12px; /* Adjust font size for smaller screens */
+      }
+      th, td {
+        padding: 5px;
+      }
+    }

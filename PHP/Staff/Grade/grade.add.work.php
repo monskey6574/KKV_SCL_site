@@ -59,41 +59,38 @@ background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, F
 </head>
 <body>
 	<div>
-		<?php
-			if(isset($_POST['create'])){
-				$firstname  = $_POST['firstname'];
-				$lastname   = $_POST['lastname'];
-				$phoneno    = $_POST['phoneno'];
-				$email      = $_POST['email'];
-				$password   = $_POST['password'];
 
-				echo $firstname ." ".$lastname ." ".$phoneno ." ".$email ." ".$password; 
-			}
-		?>
 	</div>
 	<div class="container">
-		<h2>Registration Form</h2>
-	<form action="bootstrapform.php" method="post">
+		
+	<form action="grade.add.work.check.php" method="post">
 		<div class="form-group">
-    <label for="firstname">First Name</label>
-    <input type="text" class="form-control" id="exampleInputfirstname" name="firstname">
+    <label for="firstname">Subject</label>
+    <input type="text" name="subject"  nameclass="form-control" id="exampleInputfirstname" name="firstname">
   </div>
   <div class="form-group">
-    <label for="lastname">Last Name</label>
-    <input type="text" class="form-control" id="exampleInputlastname" name="lastname">
+    <label for="lastname">Lesson Name</label>
+    <input type="text" name="lesson" class="form-control" id="exampleInputlastname" name="lastname">
+  </div>
+  
+  <div class="form-group">
+    <label for="Email1">met</label>
+    <input type="text" name="met"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+  </div>
+  
+  <div class="form-group">
+    <label for="Email1">Introduction</label>
+    <input type="text" name="intro"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
   </div>
   <div class="form-group">
-    <label for="phoneno">Phone Number</label>
-    <input type="text" class="form-control" id="exampleInputphoneno" name="phoneno">
+    <label for="Password">Submited date</label>
+    <input type="date" name="submited_day" class="form-control" id="exampleInputPassword" name="password">
   </div>
   <div class="form-group">
-    <label for="Email1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+    <label for="Password">Submited by</label>
+    <input type="text" name="submited_by" name="submited_day" class="form-control" id="exampleInputPassword" name="password">
   </div>
-  <div class="form-group">
-    <label for="Password">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword" name="password">
-  </div>
+   
    
 
 
@@ -128,11 +125,12 @@ background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, F
     </symbol>
   </defs>
 </svg>
+
 <div classs="submitbtn">
   
   
  
-<button type="submit" class="btn btn-primary" name="create">Sign up</button>
+<button type="submit" class="btn btn-primary" name="submit">Submit</button>
     </div>
 </form>
 </div>

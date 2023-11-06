@@ -33,4 +33,23 @@ opacity: 0.6;
   color: var(--color-two);
   margin-right: 8px;
 }
-.card ::shadow
+  .container {
+      padding: 20px;
+    }
+
+    .table-responsive {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      table {
+        font-size: 12px; /* Adjust font size for smaller screens */
+      }
+      th, td {
+        padding: 5px;
+      }
+    }
