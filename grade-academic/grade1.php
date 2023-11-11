@@ -104,7 +104,7 @@ if($result){
 
 
     $lesson=$row['Lesson'];
-    $met=$row['Met'];
+    $pdf=$row['Met'];
     $intro=$row['Intro'];
     
     $submted_day=$row['Subday'];
@@ -119,7 +119,10 @@ if($result){
 
   
     <td>'.$lesson.'</td>
-    <td>'.$met.'</td>
+    <td>
+    <a href="grade_1.php?download=' . $pdf . '" class="btn btn-primary" download>Download PDF</a>
+    </td>
+
     <td>'.$intro.'</td>
     <td>'.$submted_day.'</td>
     <td>'.$submited_by.'</td>

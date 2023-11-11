@@ -1,5 +1,10 @@
 @import url(style.css);
 
+body{
+  background: linear-gradient(90deg, rgba(81, 27, 9, 0.68) 0%, rgba(74, 74, 66, 0) 99%, rgba(238, 205, 130, 0.63) 100%);
+
+}
+
 
 div.row{
   line-height: 200%;
@@ -12,4 +17,25 @@ div.col-md-4{
 .pics{
   inset-block: 100px;
   
+}
+.col-md-4{
+  inset-block: 100px;
+  width: 20%;
+
+}
+.container-sm{
+  width: 100%;
+  height: auto;
+  background: linear-gradient(90deg, rgba(128, 32, 0, 0.13) 0%, rgba(71, 16, 16, 0.11) 99%);
+  padding: 5rem;
+  position: relative;
+  border-radius: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.row{
+  align-items: center;
+  justify-content: center;
+  margin-left: 100px;
 }

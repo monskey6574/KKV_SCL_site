@@ -61,6 +61,9 @@
 
 
 
+<body>
+
+
 
 
   <!-- nav bar end -->
@@ -73,7 +76,7 @@
 
       <!-- grade6 card -->
      
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="card shadow">
               <a href="grade-academic/grade1.php">
                 <img src="img/academic/grade1.png"class="card-img-top" alt="...">
@@ -100,7 +103,7 @@
 <!-- grade7 card -->
        
 
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <div class="card shadow">
             <a href="grade-academic/grade7.html">
               <img src="img/academic/grade2.png" class="card-img-top" alt="...">
@@ -111,20 +114,20 @@
               <div class="card-body card-p">
                   <div class="row">
                       <div class="col col-xs-4 ">
-                          <i class="far fa-comments"></i> 456
+                          <i class="far fa-comments"></i>
                       </div>
                       <div class="col col-xs-4 ">
-                          <i class="far fa-heart"></i> 2.4k
+                          <i class="far fa-heart"></i> 
                       </div>
                       <div class="col col-xs-4">
-                          <i class="fas fa-share"></i> 99
+                          <i class="fas fa-share"></i>
                       </div>
                   </div>
               </div>
           </div>
       </div>
 <!-- grade8 card -->
-      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
         <div class="card shadow">
           <a href="grade-academic/grade8.html">
             <img src="img/academic/grade3.png" class="card-img-top" alt="...">
@@ -149,7 +152,7 @@
     </div>
 <!-- grade9 card -->
 
-    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
       <div class="card shadow">
         <a href="grade-academic/grade9.html">
           <img src="img/academic/grade4.png" class="card-img-top" alt="...">
@@ -176,7 +179,7 @@
 
 <!-- grade10 card -->
 
-  <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+  <div class="col-12 col-sm-6 col-md-4 col-lg-3">
     <div class="card shadow">
       <a href="grade-academic/grade10.html">
         <img src="img/academic/grade5.png" class="card-img-top" alt="...">
@@ -201,7 +204,7 @@
 
 <!-- grade11 card -->
 
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="card shadow">
               <a href="grade-academic/grade11.html">
                 <img src="img/academic/grade6.png" class="card-img-top" alt="...">
@@ -224,7 +227,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <div class="card shadow">
             <a href="grade-academic/grade9.html">
               <img src="img/academic/grade7.png" class="card-img-top" alt="...">
@@ -251,7 +254,7 @@
     
     <!-- grade10 card -->
     
-      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
         <div class="card shadow">
           <a href="grade-academic/grade10.html">
             <img src="img/academic/grade8.png" class="card-img-top" alt="...">
@@ -276,7 +279,7 @@
     
     <!-- grade11 card -->
     
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
                 <div class="card shadow">
                   <a href="grade-academic/grade11.html">
                     <img src="img/academic/grade9.png" class="card-img-top" alt="...">
@@ -299,7 +302,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
               <div class="card shadow">
                 <a href="grade-academic/grade9.html">
                   <img src="img/academic/grade10.png" class="card-img-top" alt="...">
@@ -326,7 +329,7 @@
         
         <!-- grade10 card -->
         
-          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
             <div class="card shadow">
               <a href="grade-academic/grade10.html">
                 <img src="img/academic/grade11.png" class="card-img-top" alt="...">

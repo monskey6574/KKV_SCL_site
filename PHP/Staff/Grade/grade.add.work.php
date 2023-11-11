@@ -73,10 +73,7 @@ background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, F
     <input type="text" name="lesson" class="form-control" id="exampleInputlastname" name="lastname">
   </div>
   
-  <div class="form-group">
-    <label for="Email1">met</label>
-    <input type="text" name="met"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
-  </div>
+
   
   <div class="form-group">
     <label for="Email1">Introduction</label>
@@ -107,7 +104,8 @@ background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, F
 
     <p class="small my-2">Drag &amp; Drop logo image(s) inside dashed region<br><i>or</i></p>
 
-    <input id="upload_image_logo" data-post-name="image_logo" data-post-url="https://someplace.com/image/uploads/logos/" class="position-absolute invisible" type="file" multiple accept="image/jpeg, image/png, image/svg+xml" />
+<input type="file" name="upload_pdf" id="upload_pdf" class="btn-file"> 
+
 
     <label class="btn btn-upload mb-3" for="upload_image_logo">Choose file(s)</label>
 
@@ -130,7 +128,7 @@ background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, F
   
   
  
-<button type="submit" class="btn btn-primary" name="submit">Submit</button>
+<button type="submit" class="btn btn-primary"id="upload" name="submit">Upload</button>
     </div>
 </form>
 </div>

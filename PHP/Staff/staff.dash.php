@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+d cs<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -24,54 +24,15 @@ body {
     color: #1a202c;
     text-align: left;
     background-color: #e2e8f0;    
-
 }
 .main-body {
     padding: 15px;
 }
-.card {
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
-}
-
-.card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 0 solid rgba(0,0,0,.125);
-    border-radius: .25rem;
-}
-
-.card-body {
-    flex: 1 1 auto;
-    min-height: 1px;
-    padding: 1rem;
-    width: 50%;
-}
 
 
-h1{
-  font-size:1em;
-  text-align:center;
 
-  letter-spacing: 1px;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
-  padding: 20px;
-}
-.nav-container {
-  width: 100%;
-  
-  transition: all 0.5s linear;
-}
-.nav {
-  list-style-type: none;
-  margin:0;
-  padding:0;
-  display: flex;
-}
+
+
 
 a {
   border-top: 1px solid rgba(255,255,255,0.1);
@@ -112,8 +73,68 @@ span[class ^= "icon"]{
   font-size:1.5em;
   transition: all 0.3s linear;
 }
-
 /* card css */
+
+/*service*/
+
+.services a {
+  text-decoration: none;
+}
+.services .service-box {
+  text-align: center;
+}
+.services .service-box h2 {
+  color: #222;
+  font-size: 20px;
+  padding-top: 10px;
+  text-decoration: none;
+}
+.services a .service-box:hover h2 {
+  color: #FB0626;
+}
+.services .investor-box {
+    background-color: linear-gradient(90deg, rgba(31, 17, 206, 1) 0%, rgba(229, 43, 43, 1) 100%);
+
+    background-position: center center;
+    padding: 20px;
+    width: 100%;
+    min-height: 150px;
+    display: block;
+    position: relative;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.services .investor-box h2 {
+  font-size: 20px;
+}
+.services .investor-box .flip-view {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color:  rgba(128, 32, 0, 1);
+  left: -10%;
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all ease-in-out 333ms;
+}
+.services .investor-box a {
+  color:  rgb(31, 17, 206, 1) ;
+
+  font-size: 20px;
+  font-weight: 600;
+}
+.services .investor-box:hover .flip-view {
+    left: 0;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* card css end */
 /* Font */
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
 
@@ -166,6 +187,7 @@ img {
   cursor: pointer;
   border: 1px solid rgba(255, 255, 255, 0.2);
   background: transparent;
+
 }
 
 .btn:hover {
@@ -197,37 +219,7 @@ img {
   }
 }
 
-.card {
-  background-color: white;
-  border-radius: 0.25rem;
-  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
 
-.card_content {
-  padding: 1rem;
-  background: linear-gradient(to bottom left, #1B1B1B 0%, #1B1B1B 100%);
-  
-}
-
-.card_title {
-  color: #ffffff;
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: capitalize;
-  margin: 0px;
-}
-
-.card_text {
-  color: #ffffff;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  margin-bottom: 1.25rem;    
-  font-weight: 400;
-}
 .made_by{
   font-weight: 400;
   font-size: 13px;
@@ -254,9 +246,6 @@ img {
  
  
   
-}
-h6{
-  color: #999;
 }
 
 
@@ -399,71 +388,50 @@ $date = $row['staf_Adday'];
 
         </div>
 </div>
-<div class="main">
-
-<ul class="cards">
-<li class="cards_item">
-    <div class="card">
-      <div class="card_image"><img src="https://picsum.photos/500/300/?image=5"></div>
-      <div class="card_content">
-        <h2 class="card_title">Class work </h2>
-        <p class="card_text">Choose a grade and add class work</p>
-        <a class="btn btn-primary" href="Grade/gradechoose.php" role="button">GO</a>      </div>
-    </div>
-  </li>
-  <li class="cards_item">
-    <div class="card">
-      <div class="card_image"><img src="https://picsum.photos/500/300/?image=5"></div>
-      <div class="card_content">
-        <h2 class="card_title">Card Grid Layout</h2>
-        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-        <button class="btn card_btn">Read More</button>
-      </div>
-    </div>
-  </li>
-  <li class="cards_item">
-    <div class="card">
-      <div class="card_image"><img src="https://picsum.photos/500/300/?image=11"></div>
-      <div class="card_content">
-        <h2 class="card_title">Card Grid Layout</h2>
-        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-        <button class="btn card_btn">Read More</button>
-      </div>
-    </div>
-  </li>
-  <li class="cards_item">
-    <div class="card">
-      <div class="card_image"><img src="https://picsum.photos/500/300/?image=14"></div>
-      <div class="card_content">
-        <h2 class="card_title">Card Grid Layout</h2>
-        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-        <button class="btn card_btn">Read More</button>
-      </div>
-    </div>
-  </li>
-  <li class="cards_item">
-    <div class="card">
-      <div class="card_image"><img src="https://picsum.photos/500/300/?image=17"></div>
-      <div class="card_content">
-        <h2 class="card_title">Card Grid Layout</h2>
-        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-        <button class="btn card_btn">Read More</button>
-      </div>
-    </div>
-  </li>
-  <li class="cards_item">
-    <div class="card">
-      <div class="card_image"><img src="https://picsum.photos/500/300/?image=2"></div>
-      <div class="card_content">
-        <h2 class="card_title">Card Grid Layout</h2>
-        <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-        <button class="btn card_btn">Read More</button>
-      </div>
-    </div>
-  </li>
-</ul>
-</div>
-
+<!--services-->
+<div class="services pb-5">
+          <div class="container">
+            <div class="pt-5">
+           
+              <hr>
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="investor-box">
+                    <h2>Exchange Control Regulations</h2>
+                    <div class="flip-view">
+                      <a href="#">Read More <i class="fas fa-chevron-circle-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="investor-box">
+                    <h2>Brand Products made in Bangladesh EPZs</h2>
+                    <div class="flip-view">
+                      <a href="#">Read More <i class="fas fa-chevron-circle-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="investor-box">
+                    <h2>Classification of Investors</h2>
+                    <div class="flip-view">
+                      <a href="#">Read More <i class="fas fa-chevron-circle-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="investor-box">
+                    <h2>How To Apply</h2>
+                    <div class="flip-view">
+                      <a href="#">Read More <i class="fas fa-chevron-circle-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end services-->
 
 
 <script src="https://use.fontawesome.com/c9d2b81f44.js">
