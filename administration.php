@@ -1,14 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,21 +6,19 @@
   <title>History</title>
 
   <link rel="stylesheet" href="CSS/style.css">
-  <link rel="stylesheet" href="CSS/home.css">        
-  <link rel="stylesheet" href="CSS/login.css">
+  <link rel="stylesheet" href="CSS/admistration.css">
 
   <!-- boostrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 </head>
 <body>
-
   <!-- nav bar section -->
 
 
 <nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container-fluid">
-    <img class="logo" src="img/scllogo.jpg" width="100px" height="100px" >
+    <img src="img/scllogo.jpg" alt="" width="100px" height="100px">
     <div class="sclname"><a class="navbar-brand fw-bold" href="#">සිරි විද්‍යාකීර්ති විද්‍යාලය<br>කල්එළිය </a></div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -61,8 +48,6 @@
        
       </ul>
       <button class="btn btn-outline-light fw-bold" type="submit">Contact Us</button>
-
-      <a href="login.confirm.html"><button class="btn btn-outline-light fw-bold" type="submit">Login</button></a>
     </div>
   </div>
 </nav>
@@ -76,37 +61,200 @@
 <!-- nav bar end -->
 
 
+<!-- administration section start -->
 
 
+<div class="container">
+<div class="row">
 
+  <!--Grid column-->
+  <div class="col-lg-6 mb-lg-0 mb-md-4">
 
+    <!--Image-->
+    <div class="view overlay z-depth-1-half">
+      <img src="img/principle.jpg" class="img-fluid"
+        alt="">
+      <a href="#">
+        <div class="mask rgba-white-slight"></div>
+      </a>
+    </div>
 
+  </div>
+  <!--Grid column-->
 
+  <!--Grid column-->
+  <div class="col-lg-6 ">
 
+    <h3 class="font-weight-bold">Priciple massage</h3>
 
-<!-- login form start -->
+    <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente molestiae
+      numquam quas, voluptates omnis nulla ea odio quia similique corrupti magnam.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente molestiae
+      numquam quas, voluptates omnis nulla ea odio quia similique corrupti magnam.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente molestiae
+      numquam quas, voluptates omnis nulla ea odio quia similique corrupti magnam. ip</p>
 
+     
 
-<form  action="PHP/Staff/staff.dash.php" method="post">
-<div class="login-page">
-  <div class="form">
-   
-   
-      <input type="text" placeholder="Email" name="mail"/>
-      <input type="password" placeholder="Staff Number" name="index"/>
-      <button type="submit" name="submit">login</button>
-    
-    </form>
   </div>
 </div>
-</form>
+</div>
 
-<!-- login form end -->
+  <!--Grid column-->
+  <div class="container my-5">
+  <div class="row">
+    <div class="col-lg-3">
+      <img class="w-100 shadow" src="https://via.placeholder.com/824x552" />
+    </div>
+    <div class="col-lg-3">
+      <div class="p-1">
+          <h4 class="display-7">H1 Heading</h4>
+          <p class="lead">Crow's nest schooner ho scallywag hail-shot gabion salmagundi. Doubloon careen code of conduct lugsail hulk ye long clothes. </p>
+          
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="">
+
+<div class="container my-5">
+  <div class="row">
+    <div class="col-lg-3">
+      <img class="w-100 shadow" src="https://via.placeholder.com/824x552" />
+    </div>
+    <div class="col-lg-3">
+      <div class="p-1">
+          <h4 class="display-7">H1 Heading</h4>
+          <p class="lead">Crow's nest schooner ho scallywag hail-shot gabion salmagundi. Doubloon careen code of conduct lugsail hulk ye long clothes. </p>
+          
+        </div>
+    </div>
+</div>
+</div>
+<div class="container my-5">
+  <div class="row">
+    <div class="col-lg-3">
+      <img class="w-100 shadow" src="https://via.placeholder.com/824x552" />
+    </div>
+    <div class="col-lg-3">
+      <div class="p-1">
+          <h4 class="display-7">H1 Heading</h4>
+          <p class="lead">Crow's nest schooner ho scallywag hail-shot gabion salmagundi. Doubloon careen code of conduct lugsail hulk ye long clothes. </p>
+          
+        </div>
+    </div>
+</div>
 
 
 
 
 
+
+
+
+    
+    
+
+
+  
+
+   
+
+    
+    
+  </div>  
+  </div>
+
+
+
+
+
+  <!-- class teachers section -->
+  <div class="container">
+  <table class="table align-middle mb-0 bg-white">
+    <thead class="bg-light">
+      <tr>
+        <th scope="col">No.</th>
+    
+        <th scope="col">Name</th>
+        <th scope="col">Title</th>
+       
+       
+        
+        <th scope="col">Qualification</th>
+        <th scope="col">Contact</th>
+      
+      
+       
+       
+  
+      </tr>
+    </thead>
+    <tbody>
+    <?php
+include_once 'PHP/connect.php';
+
+
+$sql ="SELECT * FROM staff_data";
+$result = mysqli_query($conn,$sql);
+
+if($result){
+  while($row=mysqli_fetch_assoc($result)){
+    $no=$row['No'];
+  
+    $name=$row['staf_Name'];
+   
+
+
+    $phone=$row['staf_Phone'];
+    $title=$row['staf_Title'];
+    $quali=$row['staf_Quali'];
+  
+    echo'  <tr>
+    <th scope="row">'.$no.'</th>
+
+    <td>'.$name.'</td>
+    
+
+  
+    <td>'.$title.'</td>
+    <td>'.$quali.'</td>
+    <td>'.$phone.'</td>
+  
+  
+    <td>
+    </td>
+   
+  </tr>';
+
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+?>
+
+
+
+
+      <tr>
+        <td>
+         
+
+        
+      </tr>
+  
+    </tbody>
+  </table>
+</div>
 
 
 

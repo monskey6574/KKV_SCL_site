@@ -1,9 +1,13 @@
 @import url(style.css);
 
+body{
+  background: linear-gradient(90deg, rgba(206, 152, 17, 0.27) 0%, rgba(88, 10, 10, 1) 100%);
+
+}
 
 
 .card {
-  border: 1px solid var(--color-three);
+
   margin-bottom: 20px;
   transition: border 0.1s, transform 0.3s;
   width: 300px;
@@ -15,10 +19,11 @@
   -webkit-transform: translateY(-10px);
   transform: translateY(-10px);
   cursor: pointer;
+ 
 }
 
 .card .card-body h2 {
-  color: var(--color-two);
+ color: aqua;
 }
 
 .card img:hover {
@@ -30,7 +35,26 @@ opacity: 0.6;
 }
 
 .card-p i {
-  color: var(--color-two);
+color: black;
   margin-right: 8px;
 }
-.card ::shadow
+  .container {
+      padding: 20px;
+    }
+
+    .table-responsive {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      table {
+        font-size: 12px; /* Adjust font size for smaller screens */
+      }
+      th, td {
+        padding: 5px;
+      }
+    }

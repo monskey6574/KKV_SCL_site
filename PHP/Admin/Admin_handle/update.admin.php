@@ -1,9 +1,11 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>update</title>
 </head>
 <body>
   
@@ -157,40 +159,110 @@ a:hover {
     padding: 20px 0;
 }
     </style>
+    
+    <?php
+include_once '../../connect.php';
+$id = $_GET['updated-staff-index'];
+
+$sql = "SELECT * FROM `staff_data` WHERE `staf_Index`='$id'";
+
+$result = mysqli_query($conn,$sql);
+$row = mysqli_fetch_assoc($result);
+$name = $row['staf_Name'];
+$index = $row['staf_Index'];
+$mail = $row['staf_Mail'];
+$address = $row['staf_Address'];
+$phone = $row['staf_Phone'];
+$title = $row['staf_Title'];
+$quali = $row['staf_Quali'];
+$other = $row['staf_Other'];
+$date = $row['staf_Adday'];
+
+
+
+
+   //connection
+//    $sql = "INSERT INTO `staff_data` (staf_Index, staf_Name, staf_Mail, staf_Address, staf_Phone, staf_Title,staf_Quali,staf_Other,staf_Adday) VALUES ('$index', '$name','$mail',' $address' ,'$phone', '$title', '$quali', '$other', '$date')";
+  $sql = "UPDATE `admin_data` SET `staf_Name` = '$name', `staf_Mail` = '$mail', `staf_Address` = '$address', `staf_Phone` = '$phone', `staf_Title` = '$title', `staf_Quali` = '$quali', `staf_Other` = '$other', `staf_Adday` = '$date'
+   WHERE `staf_Index` = '$index';";
+//now i can use the connection variable $conn from connect.php
+
+   $result=mysqli_query($conn,$sql);
+  
+
+   if($result){
+   
+  
+     $success_message = "Updated  inserted successfully";
+     echo $success_message;
+   
+                            
+
+   }else{
+    echo "data not inserted. Error: " . mysqli_error($conn);
+   }
+   
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="container">
-        <form action="staff.signup.check.php" method="post" class="sign-form" id="sign-form" autocomplete="on">
-            <h1 class="form-title">ADD STAFF </h1>
+        <form action="update.staff.php" method="post" class="sign-form" id="sign-form" autocomplete="on">
+            <h1 class="form-title">UPDATE </h1>
             <!-- <p class="form-caption">See your growth and get consulting support!</p> -->
            
 
             <label for="username">Name<span class="star-required"></span></label>
-            <input type="text" name="username" id="username" placeholder="Name" autofocus required>
+            <input type="text" name="username" id="username"value= <?php echo $name?> placeholder="Name" autofocus required>
 
             <label for="index">Index<span class="star-required"></span></label>
-            <input type="text" name="index" id="email" placeholder="" required>
+            <input type="text" name="index" id="email" <?php echo $index?>placeholder="" required>
             
 
             <label for="mail">Mail<span class="star-required"></span></label>
-            <input type="email" name="email" id="email" placeholder="" required>
+            <input type="email" name="email" id="email"<?php echo $mail?> placeholder="" required>
             <label for="mail">Address<span class="star-required"></span></label>
-            <input type="address" name="address" id="address" placeholder="" required>
+            <input type="address" name="address" id="address"<?php echo $address?> placeholder="" required>
            
             <br>
             <label for="phone">Phone<span class="star-required"></span></label>
-            <input type="text" name="phone" id="phone" placeholder="" autofocus required>
+            <input type="text" name="phone" id="phone"<?php echo $phone?> placeholder="" autofocus required>
 
             <label for="title">Title<span class="star-required"></span></label>
-            <input type="text" name="title" id="title" placeholder="" required>
+            <input type="text" name="title" id="title" <?php echo $title?>placeholder="" required>
 
             <label for="quali">Qualification<span class="star-required"></span></label>
-            <input type="text" name="quali" id="quali" placeholder="" required>
+            <input type="text" name="quali" id="quali"<?php echo $quali?> placeholder="" required>
            
             <br>
             <label for="other">Other<span class="star-required"></span></label>
-            <input type="text" name="other" id="username" placeholder="" autofocus required>
+            <input type="text" name="other" id="username" <?php echo $other?>placeholder="" autofocus required>
 
             <label for="date">Date added<span class="star-required"></span></label>
-            <input type="date" name="date" id="date" placeholder="today date" required>
+            <input type="date" name="date" id="date" <?php echo $date?>placeholder="today date" required>
 
         <br>
         <p></p>
@@ -198,28 +270,12 @@ a:hover {
             <!-- <input type="checkbox" name="terms-agree" id="terms-agree" required>
             <p class="sentence-agree">I agree to the <a href="">Terms & Conditions</a></p> -->
                 <div class="sign-btn-container">
-                    <button type="submit" name="submit" class="google-sign-btn"><i class="fab fa-google"></i>Sign Up</button>
+                    <button type="submit" name="submit" class="google-sign-btn"><i class="fab fa-google"></i>Update Data</button>
 
 
         </form>
     </div>
-<!-- <?php
-    // include_once 'staff.signup.check.php';
 
-    // if($result){
-   
-    //     header("location:../admin.staff.php");
-    //     $success_message = "data inserted successfully";
-    //     echo $success_message;
-    //     echo '<script type="text/javascript">alert("' . $success_message . '");</script>';
-                               
-   
-    //   }else{
-    //    echo "data not inserted. Error: " . mysqli_error($conn);
-    //   }
-      
-   
-?> -->
 
   
 </body>

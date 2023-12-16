@@ -3,6 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>admin sign up</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
 <body>
@@ -158,7 +166,7 @@ a:hover {
 }
     </style>
 <div class="container">
-        <form action="staff.signup.check.php" method="post" class="sign-form" id="sign-form" autocomplete="on">
+        <form action="admin.signup.check.php" method="post" class="sign-form" id="sign-form" autocomplete="on">
             <h1 class="form-title">ADD STAFF </h1>
             <!-- <p class="form-caption">See your growth and get consulting support!</p> -->
            
@@ -203,24 +211,13 @@ a:hover {
 
         </form>
     </div>
-<!-- <?php
-    // include_once 'staff.signup.check.php';
 
-    // if($result){
-   
-    //     header("location:../admin.staff.php");
-    //     $success_message = "data inserted successfully";
-    //     echo $success_message;
-    //     echo '<script type="text/javascript">alert("' . $success_message . '");</script>';
-                               
-   
-    //   }else{
-    //    echo "data not inserted. Error: " . mysqli_error($conn);
-    //   }
-      
-   
-?> -->
 
   
 </body>
 </html>
+  
+</body>
+</html>
+
+

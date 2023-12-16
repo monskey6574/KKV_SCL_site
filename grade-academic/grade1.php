@@ -78,24 +78,76 @@
   <table class="table table-bordered table-hover">
     <thead class="thead-dark">
       <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
+        <th scope="col">NO</th>
+        <th scope="col">Subject</th>
+        <th scope="col">Lesson Name</th>
+        <th scope="col">Metirial</th>
+        <th scope="col">Intro</th>
+        <th scope="col">Submited date</th>
+        <th scope="col">Submited by</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td>Otto</td>
-        <td>
-          <button type="button" class="button">Download</button>
-        </td>
+    <?php
+include_once '../PHP/connect.php';
+
+
+$sql ="SELECT * FROM grade_1";
+$result = mysqli_query($conn,$sql);
+
+if($result){
+  while($row=mysqli_fetch_assoc($result)){
+    $no=$row['No'];
+  
+    $subject=$row['Subject'];
+   
+
+
+    $lesson=$row['Lesson'];
+    $pdf=$row['Met'];
+    $intro=$row['Intro'];
+    
+    $submted_day=$row['Subday'];
+    $submited_by=$row['Subby'];
+    
+  
+    echo'  <tr>
+    <th scope="row">'.$no.'</th>
+
+    <td>'.$subject.'</td>
+    
+
+  
+    <td>'.$lesson.'</td>
+    <td>
+    <a href="grade_1.php?download=' . $pdf . '" class="btn btn-primary" download>Download PDF</a>
+    </td>
+
+    <td>'.$intro.'</td>
+    <td>'.$submted_day.'</td>
+    <td>'.$submited_by.'</td>
+  
+  
+    <td>
+    </td>
+   
+  </tr>';
+
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+?>
       </tr>
      
       

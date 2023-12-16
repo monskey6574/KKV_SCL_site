@@ -23,6 +23,8 @@ body{
     font-size: 1rem;
     line-height: 1.5;
     background-image: url(../img/back.jpg);
+    background: linear-gradient(90deg, rgba(206, 152, 17, 0.27) 0%, rgba(88, 10, 10, 1) 100%);
+
     
    
     
