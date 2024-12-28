@@ -22,7 +22,7 @@ A web-based application developed for **Sri Widyakirthi Kanishta Vidyalaya Kalel
 - **Frontend**: HTML, CSS, JavaScript
 - **Backend**: PHP
 - **Database**:MYSQL
--
+
 
 ---
 
