@@ -26,5 +26,5 @@ A web-based application developed for **Sri Widyakirthi Kanishta Vidyalaya Kalel
 
 ---
 
-## 📂 Project Structure
+
 
